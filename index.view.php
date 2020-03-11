@@ -14,6 +14,15 @@
             <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo:">
 
             <textarea name="mensaje"  class="form-control" id="mensaje" placeholder="Mensaje"></textarea>
+            
+            <div class="alert success">
+
+            </div>
+
+            <div class="alert success">
+                
+            </div>
+            
             <input type="submit">
         </form>
     </div>
