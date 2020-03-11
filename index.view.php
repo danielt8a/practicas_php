@@ -10,9 +10,10 @@
 <body>
     <div class="wrap">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-            <input type="text" class="form-control" name="nombre" placeholder="Nombre:" value="">
-            <input type="text" class="form-control" name="correo" placeholder="Correo:">
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre:" value="">
+            <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo:">
 
+            <textarea name="mensaje"  class="form-control" id="mensaje" placeholder="Mensaje"></textarea>
 
         </form>
     </div>
