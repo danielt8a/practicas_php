@@ -15,13 +15,10 @@
 
             <textarea name="mensaje"  class="form-control" id="mensaje" placeholder="Mensaje"></textarea>
             
-            <div class="alert success">
+            
+            <?php if (!empty($errores)):  ?>
 
-            </div>
-
-            <div class="alert success">
-
-            </div>
+            <?php endif ?>
             
             <input type="submit" name="submit" class="btn btn-primary" value="Enviar correo">
         </form>
