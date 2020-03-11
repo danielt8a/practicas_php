@@ -32,7 +32,7 @@ if (isset($_POST['submit'])){
 
     //Validar mensajes
     if(!empty($mensaje)) {
-        //$correo = trim($correo);
+        //Evitar que el usuario pueda ingresar código
         $mensaje = htmlspecialchars($mensaje);
         $mensaje = trim($mensaje);
         $mensaje = stripslashes($mensaje);
@@ -43,6 +43,18 @@ if (isset($_POST['submit'])){
         }
 }else {
     $errores .= 'Por favor ingresa un mensaje. <br>';
+}
+
+if(!$errores){
+    $enviar_a = 'danieltelles8a@gmail.com';
+    $asunto = 'Correo enviado desde mi pagina.com';
+    $mensaje_preparado = "De: $nombre \n";
+    $mensaje_preparado .= "Correo: $correo \n";
+    $mensaje_preparado .= "Mensaje: ". $mensaje;
+
+    //La función mail sólo funcionará en un hosting
+    //mail($enviar_a, $asunto, $mensaje_preparado);
+    $enviado = 'true';
 }
 
 
