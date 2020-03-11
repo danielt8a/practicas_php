@@ -52,3 +52,10 @@ form textarea:focus {
     border: 2px solid #3F51B5;
     padding: 15px;
 }
+
+form textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 300px;
+    min-height: 150px;
+}
