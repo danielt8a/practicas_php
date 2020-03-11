@@ -14,7 +14,7 @@
             <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo:">
 
             <textarea name="mensaje"  class="form-control" id="mensaje" placeholder="Mensaje"></textarea>
-
+            <input type="submit">
         </form>
     </div>
 </body>
