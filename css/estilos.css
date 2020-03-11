@@ -77,3 +77,20 @@ form textarea{
 .alert.success {
     background: #4CAF50;
 }
+
+.btn,
+form input[type="submit"]{
+    padding: 15px;
+    background: #ED572A;
+    color: #E1E9FA;
+    font-size: 1em;
+    font-family: "Roboto", Arial, sans-serif, helvetica;
+    border-radius: 2px;
+    border: none;
+    float: right;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #E64A19;
+}
