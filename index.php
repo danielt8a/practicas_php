@@ -36,29 +36,26 @@ if (isset($_POST['submit'])){
         $mensaje = htmlspecialchars($mensaje);
         $mensaje = trim($mensaje);
         $mensaje = stripslashes($mensaje);
-        $mensaje = filter_var($correo, FILTER_SANITIZE_EMAIL);
-
-        if(!filter_var($correo, FILTER_VALIDATE_EMAIL)){
-            $errores .= 'Por favor ingresa un correo válido <br>';
-        }
-}else {
+        
+    }else {
     $errores .= 'Por favor ingresa un mensaje. <br>';
+    }
+
+
+    if(!$errores){
+        $enviar_a = 'danieltelles8a@gmail.com';
+        $asunto = 'Correo enviado desde mi pagina.com';
+        $mensaje_preparado = "De: $nombre \n";
+        $mensaje_preparado .= "Correo: $correo \n";
+        $mensaje_preparado .= "Mensaje: ". $mensaje;
+
+        //La función mail sólo funcionará en un hosting
+        //mail($enviar_a, $asunto, $mensaje_preparado);
+        $enviado = 'true';
+    }
+
 }
 
-if(!$errores){
-    $enviar_a = 'danieltelles8a@gmail.com';
-    $asunto = 'Correo enviado desde mi pagina.com';
-    $mensaje_preparado = "De: $nombre \n";
-    $mensaje_preparado .= "Correo: $correo \n";
-    $mensaje_preparado .= "Mensaje: ". $mensaje;
-
-    //La función mail sólo funcionará en un hosting
-    //mail($enviar_a, $asunto, $mensaje_preparado);
-    $enviado = 'true';
-}
-
-
-}
     require 'index.view.php';
 
 
