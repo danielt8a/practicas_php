@@ -20,10 +20,10 @@
             </div>
 
             <div class="alert success">
-                
+
             </div>
             
-            <input type="submit">
+            <input type="submit" name="submit" class="btn btn-primary" value="Enviar correo">
         </form>
     </div>
 </body>
