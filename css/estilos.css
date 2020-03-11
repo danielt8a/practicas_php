@@ -29,3 +29,18 @@ form {
     box-shadow: 0 0 3px grey;
     border-top: 4px solid #536DFE;
 }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    border: 1px solid #536DFE;
+    border-radius: 2px;
+    padding: 16px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    font-family: "Roboto", Arial, sans-serif, helvetica;
+    font-size: 1em;
+    color: #141938;
+}
